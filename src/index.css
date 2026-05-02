@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* ── Mint Clinical Glassmorphism Theme (Tailwind v4 Optimized) ── */
+@theme {
+  /* Colors from tailwind.config.js snippet */
+  --color-cream: #FAF7F2;
+  --color-mint: #7FD1B9;
+  --color-mint-deep: #2E8B7B;
+  --color-mint-soft: #E8F5F0;
+  
+  --color-coral: #FF8B6B;
+  --color-coral-soft: #FFE4DA;
+  --color-coral-dark: #E5714F;
+  
+  --color-navy: #0F2A3F;
+  --color-slate-muted: #6B7B8C;
+  --color-border: #EDE7DD;
+
+  /* Aliases for semantic use */
+  --color-primary: var(--color-mint);
+  --color-primary-dark: var(--color-mint-deep);
+  --color-primary-light: var(--color-mint-soft);
+  --color-text: var(--color-navy);
+  --color-text-secondary: var(--color-slate-muted);
+  --color-surface: var(--color-cream);
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Cabinet Grotesk', 'General Sans', 'Inter', system-ui, sans-serif;
+  --font-display: 'Cabinet Grotesk', 'General Sans', 'sans-serif';
+  --font-body: 'Inter', 'sans-serif';
+
+  /* Border Radius */
+  --radius-4xl: 2rem;
+  
+  /* Glass Surfaces */
+  --color-card: rgba(255, 255, 255, 0.7);
+}
+
+/* ── Mesh Gradient Background — Optimized for 1920x1080 ── */
+.mesh-bg {
+  background-color: var(--color-cream);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(127, 209, 185, 0.2) 0px, transparent 60%),
+    radial-gradient(at 100% 0%, rgba(255, 139, 107, 0.15) 0px, transparent 60%),
+    radial-gradient(at 100% 100%, rgba(127, 209, 185, 0.15) 0px, transparent 60%),
+    radial-gradient(at 0% 100%, rgba(255, 139, 107, 0.2) 0px, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* ── Glassmorphism Utilities ── */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px -10px rgba(15, 42, 63, 0.08);
+}
+
+.glass-dark {
+  background: rgba(15, 42, 63, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-mint {
+  background: rgba(127, 209, 185, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(127, 209, 185, 0.2);
+}
+
+.glass-coral {
+  background: rgba(255, 139, 107, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 139, 107, 0.2);
+}
+
+/* ── Base Styles ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* ── Custom Transitions ── */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px -12px rgba(15, 42, 63, 0.12);
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(46, 139, 123, 0.15);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(46, 139, 123, 0.3); }

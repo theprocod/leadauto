@@ -1,0 +1,42 @@
+export const mockTemplates = [
+  {
+    id: 1,
+    title: 'New Enquiry Reply',
+    body: 'Hi {{name}} 👋 Thanks for contacting Dr. Smile Clinic! How can we help you today? Our consultation starts at ₹500.',
+    variables: ['name'],
+    usedCount: 320,
+    category: 'Auto-reply',
+  },
+  {
+    id: 2,
+    title: 'Appointment Confirmation',
+    body: '✅ Hi {{name}}, your appointment is confirmed for {{date}} at {{time}} with Dr. {{doctor}}. Reply CANCEL to reschedule.',
+    variables: ['name', 'date', 'time', 'doctor'],
+    usedCount: 185,
+    category: 'Booking',
+  },
+  {
+    id: 3,
+    title: '2-Hour Follow-up',
+    body: 'Hi {{name}}, just checking in 😊 Did you get a chance to think about your visit?',
+    variables: ['name'],
+    usedCount: 94,
+    category: 'Follow-up',
+  },
+  {
+    id: 4,
+    title: 'Missed Lead Reactivation',
+    body: 'Hi {{name}}, we noticed you were interested in {{service}}. We\'re offering 20% off this week — want to book?',
+    variables: ['name', 'service'],
+    usedCount: 47,
+    category: 'Recovery',
+  },
+  {
+    id: 5,
+    title: 'Promotional Offer',
+    body: '🎉 Special this month: Free dental check-up + cleaning at ₹999 (worth ₹2000). Reply BOOK to grab a slot.',
+    variables: [],
+    usedCount: 210,
+    category: 'Marketing',
+  },
+]
